@@ -150,6 +150,13 @@ input[type="submit"]:active {
   float: left;
   margin-top: 10px;
 }
+.black-logo {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0;
+}
 
 /*************LINKS***********/
 a:link,
@@ -169,7 +176,7 @@ a:active {
 /*-------HEADER------------*/
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.705)),
-    url(img/hero.jpg);
+    url(img/hero-min.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -184,6 +191,7 @@ header {
   transform: translate(-50%, -50%);
 }
 
+/******Navbar*********/
 .main-nav {
   margin-top: 40px;
   float: right;
@@ -209,6 +217,52 @@ header {
   border-bottom: 2px solid #cf6d17;
 }
 
+/********sticky navbar********/
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(247, 238, 238, 0.986);
+  color: #000;
+  box-shadow: 0 2px 2px rgb(221, 218, 218);
+  z-index: 9999;
+}
+
+.sticky .main-nav {
+  margin-top: 18px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  color: #555;
+  padding: 17px 0;
+}
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+  border-bottom: 2px solid #cf6d17;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky .black-logo {
+  display: block;
+}
+
+/*******MOBILE NAVIGATION**********/
+.mobile-nav {
+  display: none;
+  cursor: pointer;
+  float: right;
+  margin-top: 30px;
+}
+
+.mobile-nav ion-icon {
+  color: white;
+}
 /**********FEATURES***********/
 .section-features .long-copy {
   margin-bottom: 30px;
@@ -316,7 +370,7 @@ header {
 /********TESTIMONIAL**********/
 .section-testimonials {
   background-image: linear-gradient(rgba(0, 0, 0, 0.808), rgba(0, 0, 0, 0.815)),
-    url(/resources/img/back-customers.jpg);
+    url(/resources/css/img/back-customers-min.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
@@ -504,4 +558,21 @@ footer p {
   color: #888;
   text-align: center;
   margin-top: 20px;
+}
+
+/*******Animations***********/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+.js--wp-4 {
+  animation-duration: 1s;
+}
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+  opacity: 1;
 }
